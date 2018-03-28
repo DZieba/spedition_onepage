@@ -1,0 +1,710 @@
+/*----------- INITIAL SETTINGS ---------*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.block {
+    display: block;
+}
+
+textarea {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: #efeaea;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    color: #000000;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: #080808e3;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#branding img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.navbar {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 120%;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.navbar>li {
+    padding: 0 10px;
+}
+
+.navbar>li>a {
+    color: #03a7a7;
+}
+
+.navbar>li>a:hover {
+    font-weight: 700;
+    text-shadow: 1px 1px 1px grey;
+}
+
+.navbar>li:last-child {
+    color: red !important;
+}
+
+.fb_icon {
+    height: 60%;
+}
+
+.part1 {
+    background-color: #636164;
+    position: relative;
+}
+
+.part1 figure img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-box {
+    position: absolute;
+    bottom: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #ffffff42;
+    padding: 17px;
+    box-shadow: 1px 1px 9px 3px grey;
+}
+
+.hero-box p {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 150%;
+}
+
+.btn-info {
+    cursor: pointer;
+    font-size: 90%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    background: #03a7a79a;
+    text-align: center;
+    border: none;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.btn-info:hover {
+    padding: 10px 17px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    background: #03a7a7;
+    font-weight: 500;
+}
+
+.part2 {
+    background-color: #f3f3f3;
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.container figure img {
+    width: 100%;
+    height: auto;
+}
+
+.container figure {
+    position: relative;
+    text-align: center;
+}
+
+.feature-list {
+    display: flex;
+    width: 400%;
+    justify-content: space-around;
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.feature-list>li {
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    animation: slider 10s infinite;
+}
+
+.feature-list>li>i {
+    font-size: 350%;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 6px grey;
+}
+
+.feature-list>li>p {
+    text-transform: uppercase;
+    color: #03a7a7;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.container>h1 {
+    font-family: 'Prata';
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 120%;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section .container {
+    height: auto;
+    background-color: #fefbff38;
+    padding: 30px;
+}
+
+section.about_us,
+section.join_us .container,
+section.contact .container,
+section.offer .container,
+section.prices .container {
+    display: block;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+section.about_us {
+    padding: 0;
+}
+
+section.about_us::after,
+section.join_us .container::after,
+section.contact .container::after,
+section.offer .container::after,
+section.prices .container::after {
+    content: "";
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/road.jpeg);
+    background-size: cover;
+    background-position-y: -200px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.clients-wrap {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.testimonials {
+    margin-top: -40px;
+    height: 150px;
+}
+
+.testimonials>.container {
+    position: relative;
+}
+
+.testimonials>.container::before {
+    content: ' klienci o nas';
+    position: absolute;
+    width: 400px;
+    left: 40%;
+    top: 100%;
+    text-transform: uppercase;
+    font-size: 250%;
+    color: #00000033;
+}
+
+.clients-wrap ul {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.clients-wrap ul li {
+    position: absolute;
+    opacity: 0;
+    transition: 2s ease-in;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.active {
+    opacity: 1 !important;
+}
+
+.q {
+    font-size: 200%;
+}
+
+section.join_us {
+    background-color: grey;
+}
+
+section.join_us .container {
+    background: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.35)), url(../img/map.png);
+    height: 100vh;
+    background-size: cover;
+}
+
+section.offer .container,
+section.prices .container,
+section.contact .container {
+    background: linear-gradient(314deg, rgb(0, 0, 0) 0%, rgba(26, 206, 189, 0.82) 100%);
+}
+
+.descr {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-around;
+}
+
+.descr1,
+.descr2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 110%;
+    width: 60%;
+    line-height: 1.5em;
+    padding: 30px;
+    background-color: #0000006e;
+}
+
+.descr1 {
+    align-self: flex-start;
+}
+
+.descr2 {
+    align-self: flex-end;
+}
+
+.name {
+    color: #03a7a7;
+    text-transform: uppercase;
+}
+
+.offer_wrapper {
+    display: flex;
+}
+
+.offer_wrapper>.offer_descr {
+    border: 1px solid red;
+    width: 45%;
+}
+
+.offer_list {
+    line-height: 1.5em;
+    padding: 20px;
+}
+
+.offer_list>ul {
+    list-style: square;
+}
+
+.join_us>.container {
+    text-align: center;
+}
+
+.join_us>.container>h1 {
+    display: inline-block;
+    background-color: #eeeeee70;
+    margin-bottom: 20px;
+}
+
+.join_us>.container>.descr {
+    width: 60%;
+    line-height: 1.5em;
+    display: block;
+    height: auto;
+    padding: 35px;
+    margin: 0 auto;
+    background-color: #fdfafab3;
+}
+.down_arrow{
+   
+    font-size: 200%;
+    
+    
+    color: #03a7a7; 
+}
+
+section.contact .container::after {
+    background-position-y: -200px;
+}
+
+.pricing_form {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: -1px -2px 20px 5px grey;
+    background-color: #fff;
+    padding: 30px 0;
+    border-radius: 10px;
+}
+
+.pricing_form label {
+    padding: 15px 0 5px;
+}
+
+.pricing_form input,
+.pricing_form select,
+.pricing_form textarea {
+    padding: 13px;
+    border-radius: 5px;
+}
+
+::-webkit-input-placeholder {
+    color: #03a7a79a;
+}
+
+::-webkit-input[type="number"]-placeholder {
+    color: #000000;
+}
+
+.general,
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.details .btn-info {
+    width: 40%;
+    margin: 15px auto;
+}
+
+.contact_people {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+.person_title {
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+#map {
+    height: 180px;
+    width: 220px;
+    position: relative;
+    margin-top: -20px;
+}
+
+footer {
+    padding: 30px 0;
+    width: 100%;
+    height: 200px;
+    background-color: #3d3c3e;
+    
+}
+
+.footer_info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_info>#branding {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.footer_info h4 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-top: 6px;
+}
+
+.contact_people figure img {
+    width: 80px;
+    border-radius: 4px;
+}
+
+.contact_people figure figcaption {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.contact_people figure figcaption .icon {
+    margin-top: 7px;
+}
+
+.contact_people figure figcaption i {
+    font-size: 120%;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    5% {
+        left: 0;
+    }
+    10% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    30% {
+        left: -25%;
+    }
+    35% {
+        left: -25%;
+    }
+    40% {
+        left: -25%;
+    }
+    45% {
+        left: -25%;
+    }
+    55% {
+        left: -50%;
+    }
+    60% {
+        left: -50%;
+    }
+    65% {
+        left: -50%;
+    }
+    70% {
+        left: -50%;
+    }
+    72% {
+        left: -50%;
+    }
+    75% {
+        left: -50%;
+    }
+    85% {
+        left: -75%;
+    }
+    90% {
+        left: -75%;
+    }
+    95% {
+        left: -75%;
+    }
+    100% {
+        left: -75%;
+    }
+}
+
+@keyframes pulse_animation {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    60% {
+        transform: scale(1.08);
+    }
+    70% {
+        transform: scale(1.08);
+    }
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation-name: pulse_animation;
+    animation-duration: 1500ms;
+    transform-origin: 70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
